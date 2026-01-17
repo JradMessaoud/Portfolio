@@ -721,32 +721,42 @@ body {
 @media (max-width: 768px) {
   .hero-section {
     min-height: auto;
-    padding: 1.5rem 1rem;
+    padding: 1rem;
     border-radius: 0 0 30px 30px;
   }
   
   .hero-content {
     flex-direction: column;
-    gap: 2rem;
-    padding-top: 3rem;
+    gap: 1.5rem;
+    padding-top: 2rem;
   }
   
   .hero-text {
     max-width: 100%;
+    text-align: center;
+  }
+  
+  .hero-name {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
   
   .hero-text h1 {
     font-size: clamp(2.5rem, 10vw, 4rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
   }
   
   .hero-image-container {
     flex: 0 0 auto;
-    max-width: 350px;
+    max-width: 300px;
+    max-height: 350px;
     margin: 0 auto;
   }
   
   .hero-profile-photo {
-    max-height: 400px;
+    max-height: 350px;
+    object-position: center center;
   }
   
   .services {
@@ -755,7 +765,8 @@ body {
   }
   
   .service-item {
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
   }
 
   .portfolio-item {
@@ -764,85 +775,190 @@ body {
   }
   
   .about-section {
-    padding: 3rem 1.5rem;
+    padding: 2rem 1rem;
   }
   
   .about-title {
     font-size: clamp(2rem, 8vw, 3rem);
+    text-align: center;
   }
   
-  .category-card {
-    height: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 1rem;
+  .about-description {
+    font-size: 0.95rem;
+    text-align: center;
   }
   
-  .hero-content {
-    padding-top: 2rem;
+  .project-image-wrapper {
+    height: 250px;
   }
   
-  .hero-text h1 {
-    font-size: 2.5rem;
-    line-height: 1;
+  .project-content-flexible {
+    padding: 1.5rem;
   }
   
-  .hero-name {
-    font-size: 1rem;
+  .project-header-flexible {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
   
-  .hero-image-container {
-    max-width: 280px;
+  .project-logo-flexible {
+    width: 60px;
+    height: 60px;
   }
   
-  .services {
-    gap: 0.5rem;
+  .project-title-flexible {
+    font-size: 1.5rem;
   }
   
-  .service-item {
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
-  }
-  
-  .service-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .portfolio-item {
-    width: 280px;
-    height: 380px;
-  }
-  
-  .about-section {
-    padding: 2rem 1rem;
+  .project-desc-flexible {
+    font-size: 0.9rem;
   }
   
   .category-card-3d {
-    height: 350px;
-  }
-  
-  .category-card-3d:hover {
-    transform: translateY(-10px) scale(1.02);
+    height: 320px;
   }
   
   .category-icon-3d {
     font-size: 5rem;
   }
   
-  .category-content-3d {
-    padding: 1.5rem;
-  }
-  
   .category-title-3d {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
   
   .category-description-3d {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 0.75rem;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .hero-content {
+    padding-top: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-name {
     font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-image-container {
+    max-width: 250px;
+    max-height: 300px;
+  }
+  
+  .hero-profile-photo {
+    max-height: 300px;
+  }
+  
+  .services {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .service-item {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .service-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .portfolio-item {
+    width: 100%;
+    max-width: 280px;
+    height: 360px;
+  }
+  
+  .about-section {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .about-title {
+    font-size: 1.75rem;
+  }
+  
+  .about-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  
+  .projects-grid-flexible {
+    padding: 1.5rem 0.5rem;
+    gap: 1.5rem;
+  }
+  
+  .project-image-wrapper {
+    height: 200px;
+  }
+  
+  .project-content-flexible {
+    padding: 1.25rem;
+  }
+  
+  .project-logo-flexible {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .project-title-flexible {
+    font-size: 1.25rem;
+  }
+  
+  .project-desc-flexible {
+    font-size: 0.85rem;
+  }
+  
+  .project-category-flexible {
+    font-size: 0.65rem;
+  }
+  
+  .category-card-3d {
+    height: 280px;
+    margin: 0.5rem;
+  }
+  
+  .category-card-3d:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+  
+  .category-icon-3d {
+    font-size: 4rem;
+  }
+  
+  .category-content-3d {
+    padding: 1.25rem;
+  }
+  
+  .category-title-3d {
+    font-size: 1.1rem;
+  }
+  
+  .category-description-3d {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .categories-section {
+    padding: 1.5rem 0.5rem;
+    gap: 1rem;
   }
 }
 
