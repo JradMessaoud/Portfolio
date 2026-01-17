@@ -10,11 +10,11 @@ const Projects = () => {
     {
       id: 1,
       title: 'Olive Oil Tracker Pro',
-      logo: '/images/projects/olive-oil-tracker/Logo.png',
+      logo: `${import.meta.env.BASE_URL}images/projects/olive-oil-tracker/Logo.png`,
       images: [
-        '/images/projects/olive-oil-tracker/1.png',
-        '/images/projects/olive-oil-tracker/2.png',
-        '/images/projects/olive-oil-tracker/3.png',
+        `${import.meta.env.BASE_URL}images/projects/olive-oil-tracker/1.png`,
+        `${import.meta.env.BASE_URL}images/projects/olive-oil-tracker/2.png`,
+        `${import.meta.env.BASE_URL}images/projects/olive-oil-tracker/3.png`,
       ],
       description: 'Advanced dashboard for tracking olive oil sales and analytics',
       category: 'Data Analytics'
@@ -22,11 +22,11 @@ const Projects = () => {
     {
       id: 2,
       title: 'TunisiaTourAI',
-      logo: '/images/projects/tunisia-tour-ai/Logo.png',
+      logo: `${import.meta.env.BASE_URL}images/projects/tunisia-tour-ai/Logo.png`,
       images: [
-        '/images/projects/tunisia-tour-ai/1.png',
-        '/images/projects/tunisia-tour-ai/2.png',
-        '/images/projects/tunisia-tour-ai/3.png',
+        `${import.meta.env.BASE_URL}images/projects/tunisia-tour-ai/1.png`,
+        `${import.meta.env.BASE_URL}images/projects/tunisia-tour-ai/2.png`,
+        `${import.meta.env.BASE_URL}images/projects/tunisia-tour-ai/3.png`,
       ],
       description: 'AI-powered tourism assistant for Tunisia using Gemini AI',
       category: 'Machine Learning'

@@ -68,7 +68,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.8 }}
         >
           <img 
-            src="/images/Messaoud_jrad_photo-removebg-preview.png" 
+            src={`${import.meta.env.BASE_URL}images/Messaoud_jrad_photo-removebg-preview.png`} 
             alt="Messaoud Jrad - AI Developer"
             className="hero-profile-photo"
           />

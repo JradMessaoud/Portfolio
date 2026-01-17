@@ -46,7 +46,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-orange-600 to-red-600 rounded-2xl transform rotate-3"></div>
               <div className="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
                 <img 
-                  src="/images/Messaoud_jrad_photo-removebg-preview.png" 
+                  src={`${import.meta.env.BASE_URL}images/Messaoud_jrad_photo-removebg-preview.png`} 
                   alt="Messaoud Jrad - AI Developer"
                   className="w-full h-full object-cover object-center"
                 />
