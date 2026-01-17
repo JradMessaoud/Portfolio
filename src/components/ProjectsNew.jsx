@@ -118,7 +118,10 @@ const Projects = () => {
             const currentImageIndex = currentImages[project.id] || 0;
             
             return (
-              <motion.div
+              <motion.a
+                href="https://github.com/JradMessaoud"
+                target="_blank"
+                rel="noopener noreferrer"
                 key={project.id}
                 className="project-card-flexible"
                 initial={{ opacity: 0, y: 30 }}
@@ -165,7 +168,7 @@ const Projects = () => {
                   </div>
                   <p className="project-desc-flexible">{project.description}</p>
                 </div>
-              </motion.div>
+              </motion.a>
             );
           })}
         </div>
