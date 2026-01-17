@@ -80,10 +80,15 @@ const Tools = () => {
           <p className="text-gray-300 text-lg mb-6">
             Always learning and exploring new technologies
           </p>
-          <div className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 rounded-full text-white font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105">
+          <a 
+            href="https://github.com/JradMessaoud?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 rounded-full text-white font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+          >
             <span>View My Projects</span>
             <span>→</span>
-          </div>
+          </a>
         </motion.div>
       </div>
     </section>
