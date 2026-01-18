@@ -87,7 +87,7 @@ const About = () => {
               <div className="space-y-4">
                 <div>
                   <p className="font-semibold text-lg">ESPRIT School of Business</p>
-                  <p className="text-gray-300">License in Business Information Systems</p>
+                  <p className="text-gray-300">Bachelor in Business Information Systems</p>
                   <p className="text-sm text-gray-400">2023 - Present</p>
                 </div>
                 <div>

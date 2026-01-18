@@ -9,7 +9,7 @@ const Education = () => {
   const education = [
     {
       icon: GraduationCap,
-      title: 'License in Business Information Systems',
+      title: 'Bachelor in Business Information Systems',
       institution: 'ESPRIT School of Business',
       date: '2023 - Present',
       description: 'Pursuing a comprehensive degree combining business strategy with information systems, focusing on AI, data analytics, and digital transformation.',
