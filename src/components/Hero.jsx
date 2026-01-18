@@ -46,6 +46,16 @@ const Hero = () => {
             <span className="analyst-first">D</span>eveloper
           </motion.h1>
           
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="hero-description"
+          >
+            Passionate AI Developer specializing in machine learning and data analytics. 
+            I transform complex data into intelligent solutions that drive innovation and business growth.
+          </motion.p>
+          
           <motion.div
             className="services"
             initial={{ opacity: 0, y: 20 }}

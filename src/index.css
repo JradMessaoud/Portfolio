@@ -70,8 +70,16 @@ body {
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 700;
   line-height: 0.9;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   letter-spacing: -0.03em;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
 }
 
 .data-word {
@@ -118,20 +126,28 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
 .hero-image-container {
-  flex: 0 0 750px;
+  flex: 0 0 550px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   position: relative;
-  max-height: 800px;
+  max-height: 650px;
   overflow: hidden;
 }
 
 .hero-profile-photo {
   width: 100%;
   height: auto;
-  max-height: 800px;
+  max-height: 650px;
   object-fit: cover;
   object-position: 100% 20%;
   filter: drop-shadow(0 20px 60px rgba(255, 140, 66, 0.4));
