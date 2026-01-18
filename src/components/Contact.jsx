@@ -1,9 +1,11 @@
 ﻿import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Mail, Phone, Linkedin, Github, Send, MapPin, CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const ref = useRef(null);
+  const formRef = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   
   const [formData, setFormData] = useState({
@@ -15,6 +17,7 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validateForm = () => {
     const newErrors = {};
@@ -53,14 +56,34 @@ const Contact = () => {
     if (!validateForm()) return;
     
     setIsSubmitting(true);
+    setSubmitError('');
     
-    setTimeout(() => {
+    try {
+      // EmailJS configuration
+      const serviceId = 'service_v34cm02';
+      const templateId = 'template_nnqis5r';
+      const publicKey = 'wz4L3MAztX_Y3xjXd';
+      
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        to_email: 'jradmassoud@gmail.com',
+        subject: formData.name,
+        message: formData.message,
+      };
+      
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
       
       setTimeout(() => setIsSubmitted(false), 5000);
-    }, 1500);
+    } catch (error) {
+      console.error('Email send error:', error);
+      setIsSubmitting(false);
+      setSubmitError('Failed to send message. Please try again or email me directly.');
+    }
   };
 
   return (
@@ -164,8 +187,18 @@ const Contact = () => {
                 <p className="text-green-400">Message sent successfully!</p>
               </motion.div>
             )}
+            
+            {submitError && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-xl"
+              >
+                <p className="text-red-400">{submitError}</p>
+              </motion.div>
+            )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <input
                   type="text"
